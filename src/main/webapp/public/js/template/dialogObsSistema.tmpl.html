@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<md-dialog aria-label="" class="modal-form">
+    <form> 
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h1>CARGA MASIVA</h1>
+                <h2>OBSERVACIONES DEL SISTEMA</h2>
+                <md-button class="md-icon-button btn-close" ng-click="cancel()">
+                    <md-icon aria-label="Close dialog" class="material-icons">close</md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content> 
+            <table style="border-spacing: 0;width: 100%;">
+                <tr>
+                    <th style="padding: 10px;border-bottom: 1px solid #ccc;text-align: left;">N°</th>
+                    <th style="padding: 10px;border-bottom: 1px solid #ccc;text-align: left;">OBSERVACION</th>
+                </tr>
+                <tr ng-repeat="o in obs">
+                    <td style="padding: 10px;border-bottom: 1px solid #ccc;width: 90px;text-align: left;">[[$index+1]]</td>
+                    <td style="padding: 10px;border-bottom: 1px solid #ccc;text-align: left;">[[o]]</td>                
+                </tr>                    
+            </table>
+            <div class="loading-message" ng-hide="obs.length == null"><h3>El registro no tiene Observaciones.</h3></div>  
+        </md-dialog-content>
+        <md-dialog-actions layout="row" layout-align="left">    
+            <md-button class="btn-confirm" ng-click="cancel()">ACEPTAR</md-button> 
+        </md-dialog-actions>
+    </form>
+</md-dialog>

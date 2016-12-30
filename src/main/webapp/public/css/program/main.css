@@ -1,0 +1,83 @@
+
+.negativo {
+    color: #e51c23;
+}
+.positivo {
+    color: #259b24;
+}
+.pendiente {
+    color: #fb8c00;
+}
+
+.desactivado{
+    background-color: #015780; 
+    color: #fff;
+}
+.activado{
+    background-color: #12a537;
+    color: #fff;
+}
+
+
+/*header*/
+.header{
+        -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently   not supported by any browser */
+    cursor: default; 
+}
+
+.header md-toolbar{
+    background-color: #023357;
+    box-shadow: 0 0 10px #21323d;
+}
+.right{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.container-block .mblock{
+    background: #fff;    
+    height: 300px; 
+    box-shadow: 0 0 6px #aaaaaa;
+    //margin: 0 1.666667% 60px 1.666667%;
+    margin: 0 1% 30px 1%;
+    white-space: normal;
+}
+
+.container-block .mblock .title{
+    color: #005780;
+    font-size: 30px;
+    margin: 0;
+    text-align: center;
+    display: block;
+    max-width: 80%;
+}
+/*.container-block .mblock:first-child{
+    margin-right: 2%;
+    margin-left:  3%;
+}
+
+.container-block .mblock:nth-child(2){
+    margin-left: 2%;
+    margin-right: 3%;
+}*/
+
+.inputhide::-webkit-input-placeholder {color:#fff!important;}
+.inputhide::-moz-placeholder          {color:#fff!important;} /* Firefox 19+ */
+.inputhide:-moz-placeholder           {color:#fff!important;} /* Firefox 18- */
+.inputhide:-ms-input-placeholder      {color:#fff!important;}
+
+.inputhide:focus::-webkit-input-placeholder {color:#fff!important;}
+.inputhide:focus::-moz-placeholder          {color:#fff!important;} /* Firefox 19+ */
+
+
+@media (max-width: 600px){
+    .container-block .mblock .title{
+            font-size: 27px;
+    }
+}
+

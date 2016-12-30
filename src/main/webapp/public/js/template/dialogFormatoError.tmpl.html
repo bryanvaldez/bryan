@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<md-dialog aria-label="" class="modal-form">
+    <form> 
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h1>CARGA MASIVA</h1>
+                <h2>ERROR FORMATO</h2>
+                <md-button class="md-icon-button btn-close" ng-click="cancel()">
+                    <md-icon aria-label="Close dialog" class="material-icons">close</md-icon>
+                </md-button>
+            </div>
+        </md-toolbar>
+        <md-dialog-content> 
+            <table style="border-spacing: 0;" ng-if="obsHeaders.length >0 ">
+                <tr>
+                    <th style="padding: 10px;border-bottom: 1px solid #ccc;text-align: left;">COLUMNA</th>
+                    <th style="padding: 10px;border-bottom: 1px solid #ccc;text-align: left;">DETALLE ERROR</th>
+                </tr>
+                <tr ng-repeat="obs in obsHeaders | orderBy:'COLUMNA'">
+                    <td style="padding: 10px;border-bottom: 1px solid #ccc;width: 90px;text-align: left;">[[ obs["COLUMNA"] ]]</td>
+                    <td style="padding: 10px;border-bottom: 1px solid #ccc;">                            
+                        [[ obs["DETALLE ERROR"] ]]
+                    </td>
+                </tr>                    
+            </table>
+            <table style="border-spacing: 0;" ng-if="obsValidation.length >0 ">
+                <tr>
+                    <th style="padding: 10px;border-bottom: 1px solid #ccc;">FILA</th>
+                    <th style="padding: 10px;border-bottom: 1px solid #ccc;">COLUMNA</th>
+                    <th style="padding: 10px;border-bottom: 1px solid #ccc;text-align: left;">DETALLE ERROR</th>
+                </tr>                 
+                <tbody>
+                    <tr ng-repeat-start='obs in obsValidation'>
+                        <th style="border-bottom: 1px solid #ccc;" rowspan="[[obs.colObs.length]]">[[ obs.row ]]</th>
+                        <td style="padding: 10px;border-bottom: 1px solid #ccc;">[[obs.colObs[0].col]]</td>
+                        <td style="padding: 10px;border-bottom: 1px solid #ccc;">[[obs.colObs[0].obs]]</td>
+                    </tr>
+                    <tr ng-repeat-end ng-repeat='o in obs.colObs' ng-hide="$first">
+                         <td style="padding: 10px;border-bottom: 1px solid #ccc;">[[ o.col ]]</td>
+                         <td style="padding: 10px;border-bottom: 1px solid #ccc;">[[ o.obs ]]</td>
+                    </tr>
+                </tbody>    
+            </table> 
+        </md-dialog-content>
+        <md-dialog-actions layout="row" layout-align="left">    
+            <md-button class="btn-confirm" ng-click="cancel()">ACEPTAR</md-button> 
+        </md-dialog-actions>
+    </form>
+</md-dialog>

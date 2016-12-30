@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans 
+       xmlns="http://www.springframework.org/schema/security"
+       xmlns:beans="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+        http://www.springframework.org/schema/security
+        http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+
+    
+    <http auto-config="true" use-expressions="true" disable-url-rewriting="true">
+        <form-login login-page="/login" 
+            authentication-failure-url="/login?error=true"
+            authentication-success-handler-ref="loginSuccessHandler"/>
+        
+        <logout logout-url="/logout" logout-success-url="/login" />
+        
+        <session-management invalid-session-url="/login"  /> 
+        
+        <access-denied-handler error-page="/403"/>
+        
+
+        <intercept-url pattern="/seguridad/**" access="hasAnyRole('PERFIL SUPER ADMINISTRADOR')" />
+        <intercept-url pattern="/mantenimiento/**" access="hasAnyRole('PERFIL SUPER ADMINISTRADOR','PERFIL ADMINISTRADOR')" /> 
+        <intercept-url pattern="/registro/**" access="hasAnyRole('PERFIL SUPER ADMINISTRADOR','PERFIL ADMINISTRADOR','PERFIL REGISTRADOR')" /> 
+        <intercept-url pattern="/reimpresion/**" access="hasAnyRole('PERFIL SUPER ADMINISTRADOR','PERFIL ADMINISTRADOR')" /> 
+        <intercept-url pattern="/carga/**" access="hasAnyRole('PERFIL SUPER ADMINISTRADOR','PERFIL ADMINISTRADOR')" /> 
+        <intercept-url pattern="/reporte/**" access="hasAnyRole('PERFIL SUPER ADMINISTRADOR','PERFIL ADMINISTRADOR')" /> 
+        <intercept-url pattern="/verificar/**" access="hasAnyRole('PERFIL SUPER ADMINISTRADOR','PERFIL ADMINISTRADOR','PERFIL REGISTRADOR')" /> 
+           
+        <intercept-url pattern="/**" access="permitAll" />
+    </http>
+
+    
+    <beans:bean id="daoAuthenticationProvider" 
+                class="org.springframework.security.authentication.dao.DaoAuthenticationProvider"
+                p:userDetailsService-ref="userDetailsService"/>
+    
+    <authentication-manager>
+        <authentication-provider user-service-ref="userDetailsService"> </authentication-provider>
+    </authentication-manager> 
+        
+</beans:beans>

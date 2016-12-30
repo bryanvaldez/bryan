@@ -1,0 +1,235 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 08/11/2016, 09:05:12 AM
+    Author     : Bryan Valdez <bvaldez at onpe.gob.pe>
+*/
+.footer-login{
+    width: 100%; 
+    height: 10px; 
+    background-color: #015780;
+    position: absolute; 
+    bottom: 0;
+}
+
+.desactivado{
+    background-color: #015780; 
+    color: #fff;
+}
+.activado{
+    background-color: #12a537;
+    color: #fff;
+}
+
+ .hint-input {
+    /* Position the hint */
+    position: absolute;
+    left: 40px;
+    right: auto;
+    bottom: -15px;
+    /* Copy styles from ng-messages */
+    font-size: 12px;
+    line-height: 14px;
+    transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);
+    /* Set our own color */
+    color: grey; }
+
+.low {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+body,html,.body{
+    height: 100%;
+    font-family: Roboto;
+    background-color: #fff;
+}
+
+
+.banner {
+    display: flex;
+    background-color: #023357;
+    height: 255px;
+    align-content:center;
+    justify-content:center;
+}
+.banner .logo{
+    background-image: url("../../../img/logo.png");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 350px;
+    width: 350px;
+    height: 250px;
+    margin-right: 20px;
+    float: right;
+}
+.banner .logo span{
+    color: #fff;
+    float: right;   
+    padding-top: 200px;
+    font-size: 22px;
+}
+.banner .logo2{
+    background-image: url("../../../img/banner.png");
+    background-repeat: no-repeat;
+    background-position: right bottom, left top;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+    box-shadow: 0 0 10px #21323d;
+}
+.content{
+}
+
+.content .block1 md-content{
+    width: 388px;
+    display: inline-block;
+    float: right;
+    margin: 45px 30px;
+    background: #FFFFFF;
+}
+.content .block1 md-input-container{
+    margin-top: 75px;
+    font-size: 22px;
+}
+.content .block1, .content .block2{
+    background-color: #fff;
+}
+.content .block1 md-icon{
+    top: 0px;
+    left: -1px;
+    right: auto;
+}
+
+.content .block1 md-icon i{
+    font-size: 35px;
+}
+.content .block2 .botones{
+    margin-top: 25px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 20px;
+    width: 300px;
+    /*margin: 0 auto;*/
+    border: solid 1px;
+}
+.content .block3{
+    margin: 0 auto;
+}
+
+.login-button {
+    box-shadow: 0 0 2px #000000;
+    color: #015780;
+    font-size: 1.1em;
+    font-weight: bold;
+    height: 100%;
+    min-width: 20px;
+    width: 100%;
+    margin: 0px;
+    background: #f0f0f0;
+}
+
+.keyboard{
+    padding: 30px 70px;
+    box-shadow: 0 0 4px #aaaaaa;
+    width: 480px;
+    margin: 50px 30px;
+    
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently   not supported by any browser */      
+}
+
+.keyboard .numbers{
+    width: 230px;
+    text-align: center;
+}
+
+.keyboard .letters{
+    width: 149px;
+    text-align: center;
+    margin-left: 70px;
+}
+
+.keyboard .letters, .keyboard .numbers{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.keyboard .key{
+    width: 64.5px;
+    height: 57.99999999999997px;    
+    color: #015780;
+    background-color: #f0f0f0;
+    border-color: #04497a;
+    box-shadow: 0 0 2px #000000;
+    display: inline-block;
+    font-size: 18.0px;
+    padding: 0px;
+    border-radius: 2px;
+    margin: 5px 7px 5px 0;
+    vertical-align: top;
+    overflow: hidden;
+    font-weight: bold;
+    cursor:pointer;
+}
+.keyboard .key:hover{
+    color: #ffffff;
+    background-color: #015780;
+}
+
+.keyboard .numbers .key:nth-child(3n), .keyboard .letters .key:nth-child(2n){
+    margin-right: 0;
+}
+.keyboard .key:last-child{
+    margin: 5px 0;
+}
+.keyboard .back{
+    width: 143.25px;
+    position: relative;
+    color: #c7921a;
+}
+.keyboard .key span{
+    display: inline-block;
+    padding: 18px;
+}
+.keyboard .back .material-icons{
+    font-weight: bold;
+}
+.keyboard .back:after{
+    content: "";
+    display: block;
+    width: 143.25px;
+    height: 7px;
+    background: #c7921a;
+    position: absolute;
+    bottom: 0;
+}
+.button-login{
+    color: #fff;
+    background-color: #2baf2b;
+    border-color: #0a8f08;
+    font-size: 1.4em;
+    padding: 10px 120px;
+    text-transform: none;
+    margin: 0 auto;
+}
+
+@media (max-width: 1200px){
+    .keyboard .letters {
+        margin-left: 10px;
+    }
+    .keyboard {
+        padding: 30px 15px;
+        width: 400px;
+        margin: 50px 30px;
+    }    
+}

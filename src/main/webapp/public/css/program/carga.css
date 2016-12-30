@@ -1,0 +1,524 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 12/12/2016, 03:28:46 PM
+    Author     : antares
+/* section */
+
+
+/*carga temporal*/
+md-progress-linear {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 15px;
+    padding-top: 0!important;
+    margin-bottom: 0!important;
+}
+md-progress-linear .md-container {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 15px;
+    -webkit-transform: translate(0,0) scale(1,1);
+    transform: translate(0,0) scale(1,1);
+}
+md-progress-linear .md-container .md-bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 15px;
+}
+md-progress-linear.md-default-theme .md-bar, md-progress-linear .md-bar {
+    background-color: #0e2140;
+}
+md-progress-linear.md-default-theme .md-container, md-progress-linear .md-container {
+    background-color: #005780;
+}
+/*carga temporal |*/
+
+
+.borderImpresion{
+    border: 4px solid #005780;
+}
+/*duplicado*/
+.input-group{
+    background: #FFFFFF;
+    display: inline-table;
+}
+
+.input-group input{
+    border: medium none;
+    padding: 5px;
+    height: 22px;
+    width: 550px;
+    display: inline-block;
+    vertical-align: top;
+    float: left;
+    background-color: #e3e3e3;
+    min-width: 200px;
+}
+.input-group button{
+    border: medium none;
+    border-bottom: 2px solid #c6911a;
+    display: inline-block;
+    height: 34px;
+    vertical-align: top;
+    background: transparent;
+    background-color: #e3e3e3;
+    float: left;
+}
+
+/*duplicado*/
+
+
+.title-section{
+    color: #005780;
+    margin: 10px 0 ;
+    display: inline-block;
+    font-size: 37.5px;
+}
+.section-head{
+    position: relative;
+}
+.section-head .btn-back{
+    color: rgb(68, 85, 102);
+    position: absolute;
+    left: 0;
+    margin-left: -40px;
+    top: 13px;
+}
+
+.section-head .btn-back md-icon{
+    color: #005780;
+    font-weight: bold;
+}
+/* end section */
+
+/* Table */
+table.table-default{
+    width: 100%;
+    border-spacing: 0;
+    font-size: 15px;
+}
+table.table-default td, table.table-default th{
+    padding: 7px 10px;
+}
+
+table.table-default td{
+    border-top: 4px solid #FFF;
+
+}
+table.table-default td.rownum{
+    text-align: center;
+    border-right: 4px solid #FFF;
+}
+table.table-default td.space, table.table-default th.space{
+    border-left: 7px solid #FFF;
+}
+
+table.table-default td:last-child, table.table-default th:last-child{
+    border-right: none;
+}
+table.table-default td:first-child, table.table-default th:first-child{
+    border-left: none;
+}
+
+table.table-default thead tr{
+    background: #FFFFFF;
+    text-align: left;
+    font-size: 18px;
+    color: #005780;
+}
+
+table.table-default tbody tr:nth-child(odd){
+    background: #e3e3e3;
+}
+table.table-default tbody tr:nth-child(even){
+    background: #f0f0f0;
+}
+
+table.table-default md-select, table.table-default md-input-container{
+    margin: 0;    
+}
+table.table-default md-input-container{
+    overflow: hidden;
+    height: 30px;
+}
+table.table-default td.action-col{
+    padding: 4px;
+}
+table.table-default td.action-col .md-button, table.table-default .md-button.btn-action{
+    padding: 0;
+    height: 10px;
+    min-height: 30px;
+    width: 30px;
+    margin: 0;
+}
+table.table-default td.action-col .md-button md-icon, table.table-default .md-button.btn-action md-icon{
+    color: #444444;
+    font-size: 20px;
+}
+
+table.table-default .md-button.btn-action{
+    margin-left: 10px;
+}
+
+table.table-default caption, table.table-default .caption th{
+    font-size: 18px;
+    color: #005780;
+    padding: 3px 0;
+    text-align: left;
+    font-weight: normal;    
+}
+
+table.table-default .separator{
+    border-left: 20px solid #fff;
+}
+/* end Table */
+
+.space .md-button {
+    min-width: 25px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    vertical-align: middle;
+    color: #005780;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 22px;
+    /* line-height: 50px; */
+}
+
+/* Modal*/
+.modal-form{
+    border-radius: 0;
+    box-shadow: 0 0 6px #333333;
+    max-width: 600px;
+    min-width: 600px;
+}
+.modal-form md-toolbar{
+    background: #023357;
+    box-shadow: 0 0 4px #333333;
+    padding: 70px 10px 15px 10px;
+    color: #FFFFFF;
+    overflow: hidden;
+    min-height: 165px;
+}
+.modal-form md-toolbar .md-button.btn-close{
+    top: 0px;
+    position: absolute;
+    right: 0;
+    margin: 0;
+}
+.modal-form md-toolbar .btn-close md-icon{
+    font-weight: bold;
+    color: #b5b5b5;
+    font-size: 22px;
+}
+.modal-form md-toolbar .btn-close:hover md-icon{
+    color: #FFFFFF;
+}
+
+.modal-form .md-toolbar-tools{
+    display: block;
+}
+
+.modal-form .md-toolbar-tools h2, .modal-form .md-toolbar-tools h1{
+    font-size: 30.5px;
+    font-weight: bold;
+    margin: 5px 0px 0px 0px;
+}
+
+.modal-form form label{
+    font-size: 15px;
+}
+.modal-form form .md-input, .modal-form form md-select md-select-value .md-text{
+    font-size: 18px;    
+    color: #4a4a49;
+    font-weight: bold;
+}
+.modal-form form .md-input-focused label, .modal-form form md-select md-select-value span{
+    color: #9d9d9c;
+    font-size: 15px;
+}
+.modal-form form .md-input-focused .md-input, 
+.modal-form form .md-input-focused md-select:not([disabled]):focus .md-select-value{
+    border-bottom-color: #4a4a49;    
+}
+
+.modal-form form .hint{
+    font-size: 12px;
+    color: rgb(157, 157, 156);
+}
+
+.modal-form md-dialog-actions .md-button{
+    font-size: 21px;
+    font-weight: normal;
+    color: #023357;
+}
+
+.modal-form md-dialog-actions .btn-cancel{
+    color: #e51c23;
+}
+
+.modal-form md-dialog-actions .btn-confirm{
+    color: #023357;
+}
+
+.modal-form form span.inline-label{
+    color: rgb(157, 157, 156);
+    font-size: 15px;
+}
+
+.modal-form .md-button.btn-new{
+    width: 45px;
+    height: 45px;
+}
+.modal-form md-input-container, .modal-form md-select{
+    margin: 10px 0; 
+}
+.modal-form md-tabs{
+    border-radius: 0;
+}
+.modal-form md-tabs md-tabs-wrapper{
+    background: #023357;
+}
+
+.modal-form md-tabs .md-tab.md-active{
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.modal-form md-tabs .md-tab{    
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 18px;
+    text-align: right;
+}
+.modal-form md-tabs md-ink-bar {
+    color: #FFFFFF;
+    background: #FFFFFF;
+    height: 3px;
+}
+
+.modal-form md-dialog-content {
+    padding: 30px;
+}
+
+.modal-tab md-dialog-content{
+    padding: 0;
+}
+.modal-tab md-tabs-content-wrapper {
+    padding: 30px;
+}
+
+.modal-tab md-toolbar{
+    min-height: 120px;
+    box-shadow: none;
+}
+/* end Modal*/
+
+/* Form elements */
+md-input-container.md-input-focused:not(.md-input-invalid) label, .md-input-focused label{
+    color: rgba(0,0,0,0.54);
+}
+md-select:not([disabled]):focus .md-select-value, 
+md-input-container.md-input-focused .md-input:focus{
+    border-bottom-color: #4a4a49;
+}
+md-select-menu md-content md-option[selected]{
+    color: #4a4a49;
+}
+.md-active md-select-menu md-content md-option[selected]{
+    color: #005780;
+}
+
+/* end Form elements */
+
+/* Breadcrumbs ejem:   item1 /  item2 / item3     */
+.breadcrumbs{
+    padding: 0;
+}
+.breadcrumbs li{
+    display: inline-block;
+}
+.breadcrumbs li:after{
+    content: "/";
+    padding: 0 10px;
+}
+.breadcrumbs li:last-child:after{
+    content: "";
+    padding: 0;
+}
+/* end Breadcrumbs */
+
+/* Labels */
+.label{
+    padding: 5px;
+    color: #FFFFFF;
+    border-radius: 3px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+    display: inline-block;
+}
+.label.label-green{
+    background: #259b24;
+}
+.label.label-yellow{
+    background: #ff9800;
+}
+.label.label-red{
+    background: #e51c23;
+}
+/* end Labels */
+
+/* Custom buttons */
+.btn-default, .md-button.btn-default, .md-button.btn-default.md-raised:not([disabled]).md-focused{
+    padding: 7px;    
+    color: #fff;
+    background-color: #005780;
+    box-shadow: 0 0 6px #aaaaaa;
+    font-size: 14px;
+    border-radius: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    height: 40px;
+    line-height: 20px;
+    font-weight: bold;
+    min-width: 150px;
+}
+
+.btn-default:hover, .md-button.md-raised.btn-default:hover{
+    background: #023357;
+}
+/* end Custom buttons */
+
+/* Others */
+.line{
+    border-top: 1px solid #BBBBBB;
+}
+.line-vertical{
+    border-left: 1px solid rgb(204, 204, 204);
+}
+/* end Others */
+
+/* section styles */
+
+/* ----- Carga --- */
+.carga-section md-select:not([disabled]):focus .md-select-value{
+    border-bottom-color: #c6911a;
+}
+.carga-section md-autocomplete input{
+    height: 40px;
+    box-shadow: 0 0 2px #aaaaaa;
+    padding: 5px;
+}
+.carga-section md-autocomplete md-input-container:not(.md-input-focused) label{
+    width: 95%;
+    padding: 0 2.5%;
+    font-size: 16px;
+}
+.carga-section md-autocomplete md-input-container.md-input-focused label,
+.carga-section md-autocomplete md-input-container.md-input-has-value label:not(.md-no-float){
+    padding: 10px 0;
+    font-size: 16px;
+}
+
+.carga-section md-select:focus:not([disabled]) .md-select-value{
+    color: #c6911a;
+}
+
+.carga-section .md-block{
+    margin-bottom: 80px;
+}
+.carga-section md-autocomplete{
+    margin-top: 20px;
+}
+.carga-section .lf-ng-md-file-input{
+    position:relative;
+}
+.carga-section .lf-ng-md-file-input .lf-ng-md-file-input-container{
+    box-shadow: none;
+}
+.carga-section .lf-ng-md-file-input .lf-ng-md-file-input-caption,
+.carga-section .lf-ng-md-file-input .lf-ng-md-file-input-caption.disabled {
+    background: transparent;
+    margin-left: 305px;
+    height: 40px;
+    border-radius: 0;
+}
+.carga-section .lf-ng-md-file-input .lf-ng-md-file-input-container .md-raised.lf-ng-md-file-input-button.lf-ng-md-file-input-button-remove span,
+.carga-section .lf-ng-md-file-input .lf-ng-md-file-input-container .lf-icon{
+    display: none;
+}
+.carga-section .lf-ng-md-file-input .lf-ng-md-file-input-container .md-raised.lf-ng-md-file-input-button.lf-ng-md-file-input-button-remove{
+    min-width: 30px;
+    background: transparent;
+    position: absolute;
+    left: 275px;
+    height: 40px;
+}
+.carga-section .lf-ng-md-file-input .lf-ng-md-file-input-container .md-raised.lf-ng-md-file-input-button.lf-ng-md-file-input-button-remove .lf-icon{
+    display: inherit;
+    
+}
+.carga-section .lf-ng-md-file-input .lf-ng-md-file-input-container .lf-ng-md-file-input-caption .lf-ng-md-file-input-caption-text{
+    color: #259b24;
+    padding-right: 20px;
+}
+.carga-section .lf-ng-md-file-input .lf-ng-md-file-input-container .lf-ng-md-file-input-caption .lf-ng-md-file-input-caption-text:after{
+    font-family: 'Material Icons';
+    content: "done";
+    right: 0;
+    position: absolute;
+}
+.carga-section .lf-ng-md-file-input .lf-ng-md-file-input-container .md-raised.lf-ng-md-file-input-button.lf-ng-md-file-input-button-brower{
+    
+    padding: 7px;    
+    width: 270px;    
+    color: #9d9d9c;
+    box-shadow: 0 0 6px #aaaaaa;
+    font-size: 14px;
+    border-radius: 2px;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    height: 40px;
+    line-height: 20px;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+.carga-section .lf-ng-md-file-input .lf-ng-md-file-input-container .md-raised.lf-ng-md-file-input-button.lf-ng-md-file-input-button-brower:not([disabled]){
+    
+    background-color: #005780;
+    color: #fff;
+}
+
+.carga-section .lf-ng-md-file-input md-progress-linear{
+    background: #456;
+}
+.carga-section .lf-ng-md-file-input md-progress-linear .md-container{
+    height: 10px;
+    background: #005780;
+}
+.cargalist-section table td:last-child{
+    text-align: center;
+}
+.cargalist-section table td .label{
+    min-width: 70px;
+/*        border-radius: 8px;
+        height: 8px;
+    width: 8px;*/
+    
+}
+.cargalist-section .action-btn{
+    margin-top: 50px;
+}
+/* ----- end Carga --- */
